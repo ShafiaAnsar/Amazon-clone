@@ -5,13 +5,53 @@ import {Link} from 'react-router-dom'
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { useStateValue } from '../StateProvider'
 
+// function Header() {
+//     const [{basket}, dispatch] = useStateValue()
+//   return (
+//     <div>
+//        <div className='header'>
+//       <Link to= '/'>
+//       <img src='https://pngimg.com/uploads/amazon/amazon_PNG11.png' alt='' className='header_logo'/></Link>
+//     <div className='header_search'>
+//          <input type='text' className='header_searchInput' />
+//          <SearchIcon className='header_searchIcon'/>
+//         <div className='header_nav'>
+//             <div className='header_option'>
+//                 <span className='header_optionLineOne'>Hello </span>
+//                 <span className='header_optionLine'>SignIn
+//                 </span>
+
+//             </div>
+//             <div className='header_option'>
+//                 <span className='header_optionLineOne'>Returns </span>
+//                     <span className='header_optionLineTwo'>&Orders</span>
+                    
+//             </div>   <div className='header_option'>
+//                 <span className='header_optionLineOne'>Your </span>
+//                     <span className='header_optionLineTwo'>Prime</span>
+//             </div>
+//         </div>
+//         <Link to='/checkout'>
+//         <div className='header_optionBasket'>
+//             <ShoppingBasketIcon />
+//             <span className='header_optionLineTwo header_basketCount'> 0{basket?.lenght}
+//            </span>
+//         </div>
+//         </Link>
+//     </div>
+//     </div>
+//     </div>
+//   )
+// }
+
+// export default Header
 function Header() {
     const [{ basket, user }, dispatch] = useStateValue();
   
     const handleAuthenticaton = () => {
-    //   if (user) {
-    //     auth.signOut();
-    //   }
+      // if (user) {
+      //   auth.signOut();
+      // }
     }
   
     return (
