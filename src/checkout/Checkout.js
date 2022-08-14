@@ -4,13 +4,14 @@ import './Checkout.css'
 import CheckoutProduct from './CheckoutProduct'
 import Subtotal from './Subtotal'
 function Checkout() {
-  const [{basket} , dispatch] =useStateValue()
+  const [{basket , user} ] =useStateValue()
   return (
     <div className='checkout'>
       
     <div className='checkout_left'>
       <img className='checkout_ad' src='https://m.media-amazon.com/images/G/01/AmazonGo/Engagment/2021/NewLP2021/LPRound3August/Header_TakeIt_1500x300.jpg' alt='checkout_ad'/>
       <div>
+      <h3> hello,{user?.email}</h3>
         <h2 className='check_title'>
           Your Shopping Basket
         </h2>

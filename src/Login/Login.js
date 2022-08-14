@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link,  useNavigate } from 'react-router-dom'
 import './Login.css'
 import {auth } from '../firebase'
 function Login() {
   const navigate = useNavigate()
   const [email ,setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [name , setName] = useState('')
   const signIn = e =>{
     e.preventDefault()
     console.log('signIn')
@@ -23,7 +24,7 @@ function Login() {
         navigate('/')
       }
     }).catch(error => alert(error.message))
-    e.target.reset()
+    // e.target.reset()
   }
   return (
     <div className='login'>
@@ -34,6 +35,8 @@ function Login() {
     <div className='login_container'>
       <h1>Sign-In</h1>
       <form>
+        <h5>Name</h5>
+        <input type= 'name' placeholder='Name' value={name} onChange={e => setName(e.target.value)}/>
     <h5>Email</h5>
     <input type='email' value={email} onChange={e => setEmail(e.target.value)}      placeholder='Email'/>
     <h5>Password</h5>
