@@ -3,7 +3,7 @@ import './Home.css'
 import Product from './Product'
 function Home() {
   return (
-    <div className='home'>
+    <div className='home' id='home'>
         <div className='home_container'>
        <img className='home_image' src='https://images-na.ssl-images-amazon.com/images/G/15/digital/video/merch/Other/BRND_MTH21_SADLPDesktop_1453x363_Final_nolocale_PVD7436_Canada.jpg' alt=''/>
        <div className='home_row'>

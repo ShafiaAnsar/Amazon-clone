@@ -5,39 +5,39 @@ const Footer = () => {
   return (
     <div className='footer section__padding'>
       <div className='footer-heading'>
-        <h1 className='gradient-text'>Do you want to step in to the future before others</h1>
-      </div>
-      <div className='footer-btn'>
-        <p>Request Early Access</p>
+       <a href='#home'>Back to top</a>
       </div>
       <div className='footer-links'>
-        <div className='footer-links_logo'>
-          {/* <img src={gpt3logo} alt='logo'/> */}
-          <p>Crechterwoord K12 182 DK Alknjkcb, All Rights Reserved</p>
+        <div className='footer-headings'>
+          <h4>Get to Know Us</h4>
+          <p>Blog</p>
+          <p>About Amazon</p>
+          <p>Career</p>
+          <p>Investor Relations</p>
+          <p>Amazon Devices</p>
+          <p>Amazon Science</p>
         </div>
-        <div className='footer-links_div'>
-          <h4>Links</h4>
-          <p>Overons</p>
-          <p>Counters</p>
-          <p>Social Media</p>
-          <p>Contact</p>
+        <div className='footer-headings'>
+          <h4>Make Money with Us</h4>
+          <p>Sell products on Amazon</p>
+          <p>Sell on Amazon Business</p>
+          <p>Sell apps on Amazon</p>
+          <p>Host an Amazon Hub</p>
+          <p>Amazon Currency Converter</p> 
+          
         </div>
-        <div className='footer-links_div'>
-          <h4>Company</h4>
-          <p>Terms & Conditions</p>
-          <p>Counters</p>
-          <p>Privacy Policy</p>
-          <p>Contact</p>
-        </div>
-        <div className='footer-links_div'>
-          <h4>Get in touch</h4>
-          <p>Crechterwoord K12 182 DK Alknjkcb</p>
-          <p>085-132567</p>
-          <p>info@payme.net</p>         
+        <div className='footer-headings'>
+          <h4>Amazon Payment Products</h4>
+          <p>Amazon Business Card</p>
+          <p>Reload Your Balance</p>
+          <p>Advertise Your Products</p>
+          <p>Self-Publish with Us</p>
+          <p>Manage Your Content and Devices</p>
+          <p>Amazon Assistant</p>
         </div>
       </div>
       <div className='footer-copyright'>
-        <p>© 2021 GPT-3. All rights reserved.</p>
+        <p>© 1996-2022, Amazon.com, Inc. or its affiliates</p>
       </div>
     </div>
   )
