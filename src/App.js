@@ -9,6 +9,7 @@ import Checkout from "./checkout/Checkout"
 import {auth } from './firebase'
 import { useStateValue } from './StateProvider';
 import Footer from './Footer/Footer';
+import Navbar from './Navbar/Navbar';
 function App() {
   const [{},dispatch] =useStateValue()
    useEffect(() => {
@@ -36,10 +37,10 @@ function App() {
     <Route path='/login' 
     element ={<Login/>}
     />
-      <Route path='/' element={<><Header/>,<Home/>, <Footer/></>}/>
+      <Route path='/' element={<><Header/><Navbar/><Home/> <Footer/></>}/>
 
-      <Route path='/checkout' element={<><Header />,<Checkout/></>  }/>
-    <Route path='/payment' element={<><Header />,<Payment /></>}/>
+      <Route path='/checkout' element={<><Header /><Checkout/></>  }/>
+    <Route path='/payment' element={<><Header /><Payment /></>}/>
   </Routes>
   </div>
   </BrowserRouter>

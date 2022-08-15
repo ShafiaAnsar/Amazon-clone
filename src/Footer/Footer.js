@@ -3,7 +3,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <div className='footer section__padding'>
+    <div className='footer'>
       <div className='footer-heading'>
        <a href='#home'>Back to top</a>
       </div>

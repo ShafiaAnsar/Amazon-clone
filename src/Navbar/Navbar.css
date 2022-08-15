@@ -1,0 +1,24 @@
+.navbar{
+    display: flex;
+    justify-content: start;
+    align-items: center; 
+    background-color: #232f3e;
+    color: aliceblue;
+    height: 60px;
+    width: 100%;
+    
+}
+.navbar_option{
+    display: flex;
+
+}
+.nav_item{
+    margin: 40px;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: 500;  
+}
+.nav_item:hover{
+    color: lightgrey;
+    cursor: pointer;
+}
