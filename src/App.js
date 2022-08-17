@@ -43,7 +43,7 @@ function App() {
     />
       <Route path='/' element={<><Header/><Navbar/><Home/> <Footer/></>}/>
 
-      <Route path='/checkout' element={<><Header /><Checkout/></>  }/>
+      <Route path='/checkout' element={<><Header /><Navbar/><Checkout/><Footer/></>  }/>
     <Route path='/payment' element={<><Header />
     <Elements stripe={promise}>
       <Payment />

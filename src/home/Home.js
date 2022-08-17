@@ -26,10 +26,12 @@ ETHNIC EMPORIUM indian Bollywood Designer Heavy Border & plain Anarkali Long Geo
      </div>
      <div className='home_row'>
      <Product title='Anna by Anuschka Womens Genuine Leather V Top Multi-Compartment Crossbody' image='https://m.media-amazon.com/images/I/A1Yy4lAJ2lL._AC_UL320_.jpg' price={163} rating={5} id='12399'/>
-     <Product title='Amazfit Bip 3 Smart Watch for Android iPhone, Health Fitness Tracker with 1.69" Large Display,14-Day Battery Life, 60+ Sportsy' image='https://m.media-amazon.com/images/I/71XElrMMgML._AC_UL320_.jpg' price={57.36 } rating={4} id='12499'/>
+     
      <Product title='Anna by Anuschka Womens Genuine Leather Slim Cross Shoulder Bag  Hand Painted Original Artwork Exterior' image='https://images-na.ssl-images-amazon.com/images/I/A11t3Z5GmyL._AC_UL160_SR160,160_.jpg' price={139 } rating={4} id='12493'/>
      </div>
-       
+       <div className='home_row'>
+       <Product title='Amazfit Bip 3 Smart Watch for Android iPhone, Health Fitness Tracker with 1.69" Large Display,14-Day Battery Life, 60+ Sportsy' image='https://m.media-amazon.com/images/I/71XElrMMgML._AC_UL320_.jpg' price={57.36 } rating={4} id='12499'/>
+       </div>
         </div>
     
     </div>
