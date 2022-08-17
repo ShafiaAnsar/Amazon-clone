@@ -14,6 +14,7 @@ function Header() {
         auth.signOut();
       }
     }
+    //("sk_test_51LX8IGAfIMT7qjMAvvvuQ41QxmQHmAESmp1JYqf4qvuXwobaUaaL2tmmf64AxC6T1UvfQtIXXa3GFroS5FPpDxE100QSTNQhiL")
   
     return (
       <div className="header" id='header'>

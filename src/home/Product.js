@@ -10,8 +10,8 @@ function Product({id,title,image,price,rating}) {
     //dispatch the item intp data layer
     dispatch({  
       type: 'ADD_TO_BASKET',
-      item:{
-        id:id,
+      item:{     
+         id:id,
         title:title,
         image:image,
         price:price,
@@ -27,7 +27,8 @@ function Product({id,title,image,price,rating}) {
         <strong>{price}</strong>
         </p>
         <div className='product_rating'>
-            {Array(rating).fill().map((_, i)=>(
+            {Array(rating).fill().map((_)=>(
+              
                 <p>⭐</p>
             ))}
             

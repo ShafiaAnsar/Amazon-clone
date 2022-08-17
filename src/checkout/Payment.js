@@ -17,20 +17,21 @@ function Payment() {
     const [processing ,setProcessing ] = useState('')
     const [error ,setError] = useState(null)
     const [disabled, setDisabled] = useState(true)
-    const [clientSecret , setClientSecret] = useState(true)
+    const [clientSecret , setClientSecret] = useState()
     useEffect(() => {
         //create special stripe secret that allows us to charge a customer
         const getClientSecret = async()=>{
             const responce = await axios ({
                 method : 'post',
                 //stripe expect the total in a curriences subunits
-                url: `/payment/create?total= ${getBasketTotal(basket)*100}`
+                url: `/payments/create?total= ${getBasketTotal(basket)*100}`
             })
             setClientSecret(responce.data.clientSecret)
 
         }  
         getClientSecret()
     }, [basket]);
+        
     const handleSubmit= async(e)=>{
         e.preventDefault()
         setProcessing(true)
@@ -44,6 +45,12 @@ function Payment() {
             setSucceeded(true)
             setError(null)
             setProcessing(false)
+            dispatch({
+                type:'EMPTY_BASKET'
+            })
+
+
+
             navigate('/orders')
         })
     }
@@ -109,7 +116,7 @@ function Payment() {
                         thousandSeparator={true}
                         prefix={'$'}
                 />
-                <button disabled ={processing || disabled ||  succeeded}>
+                <button disabled ={processing || disabled ||  succeeded} >
                     <span>{processing ? <p>Processing</p> :'Buy Now' }</span>
                 </button> 
                 </div>
