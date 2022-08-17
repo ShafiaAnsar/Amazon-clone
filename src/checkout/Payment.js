@@ -1,61 +1,79 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState ,useEffect} from 'react'
 import { useStateValue } from '../StateProvider'
 import CheckoutProduct from './CheckoutProduct'
 import CurrencyFormat from 'react-currency-format';
-import { useNavigate } from 'react-router-dom';
+import { parsePath, useNavigate } from 'react-router-dom';
 import './Payment.css'
 import {Link} from 'react-router-dom'
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { CardElement, useStripe, useElements} from "@stripe/react-stripe-js";
+import { db } from '../firebase';
+import axios from '../axios';
 import { getBasketTotal } from '../reducer';
-import axios from '../axios'
 function Payment() {
     const [{basket,user}, dispatch ] = useStateValue()
-    const navigate = useNavigate()
-    const stripe = useStripe()
-    const elements = useElements()
-    const [succeeded, setSucceeded] = useState(false)
-    const [processing ,setProcessing ] = useState('')
-    const [error ,setError] = useState(null)
-    const [disabled, setDisabled] = useState(true)
-    const [clientSecret , setClientSecret] = useState()
-    useEffect(() => {
-        //create special stripe secret that allows us to charge a customer
-        const getClientSecret = async()=>{
-            const responce = await axios ({
-                method : 'post',
-                //stripe expect the total in a curriences subunits
-                url: `/payments/create?total= ${getBasketTotal(basket)*100}`
-            })
-            setClientSecret(responce.data.clientSecret)
+    const navigate = useNavigate()  
+    const stripe = useStripe();
+    const elements = useElements();
 
-        }  
-        getClientSecret()
-    }, [basket]);
-        
+    const [succeeded, setSucceeded] = useState(false);
+    const [processing, setProcessing] = useState("");
+    const [error, setError] = useState(null);
+    const [disabled, setDisabled] = useState(true);
+    const [clientSecret, setClientSecret] = useState(true);
+  
+   const submit = ()=>{
+    
+    navigate('/orders')
+   }
+   useEffect(() => {
+    // generate the special stripe secret which allows us to charge a customer
+    const getClientSecret = async () => {
+        const response = await axios({
+            method: 'post',
+            // Stripe expects the total in a currencies subunits
+            url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+        });
+        setClientSecret(response.data.clientSecret)
+    }
+
+    getClientSecret();
+}, [basket])
+
+console.log('THE SECRET IS >>>', clientSecret)
+console.log('👱', user)
     const handleSubmit= async(e)=>{
-        e.preventDefault()
-        setProcessing(true)
+        e.preventDefault();
+        setProcessing(true);
 
         const payload = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: elements.getElement(CardElement)
             }
-        }).then(({paymentIntent})=>{
-            //  paymentIntent =  payment confirmation
-            setSucceeded(true)
+        }).then(({ paymentIntent }) => {
+            // paymentIntent = payment confirmation
+
+            db
+              .collection('users')
+              .doc(user?.uid)
+              .collection('orders')
+              .doc(paymentIntent.id)
+              .set({
+                  basket: basket,
+                  amount: paymentIntent.amount,
+                  created: paymentIntent.created
+              })
+
+            setSucceeded(true);
             setError(null)
             setProcessing(false)
+
             dispatch({
-                type:'EMPTY_BASKET'
+                type: 'EMPTY_BASKET'
             })
-
-
-
-            navigate('/orders')
+        navigate('/orders')
         })
     }
-    const handleChange =(e)=>{
-        setDisabled(e.empty);
+const handleChange =(e)=>{
         setError(e.error? e.error.message :'')
     }
      
@@ -116,14 +134,14 @@ function Payment() {
                         thousandSeparator={true}
                         prefix={'$'}
                 />
-                <button disabled ={processing || disabled ||  succeeded} >
-                    <span>{processing ? <p>Processing</p> :'Buy Now' }</span>
+                <button onClick={submit} >
+                    <span> Buy Now </span>
                 </button> 
                 </div>
                 {error && <div>{error}</div>}
 
 
-                </form>
+            </form>
             </div>
 
         </div>

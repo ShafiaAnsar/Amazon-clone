@@ -489,3 +489,124 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2022-08-17T06:48:41.985Z] [worker-us-central1-api-200c166d-1123-4257-b363-1ec1465de016]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-200c166d-1123-4257-b363-1ec1465de016]: exited"}}
 [debug] [2022-08-17T06:48:41.986Z] [worker-us-central1-api-200c166d-1123-4257-b363-1ec1465de016]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-200c166d-1123-4257-b363-1ec1465de016]: FINISHED"}}
 [debug] [2022-08-17T06:48:41.986Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-08-17T17:41:45.253Z] ----------------------------------------------------------------------
+[debug] [2022-08-17T17:41:45.257Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pak\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-08-17T17:41:45.258Z] CLI Version:   11.7.0
+[debug] [2022-08-17T17:41:45.258Z] Platform:      win32
+[debug] [2022-08-17T17:41:45.258Z] Node Version:  v18.7.0
+[debug] [2022-08-17T17:41:45.260Z] Time:          Wed Aug 17 2022 09:41:45 GMT-0800 (GMT-08:00)
+[debug] [2022-08-17T17:41:45.260Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-17T17:41:45.267Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-08-17T17:41:45.539Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-17T17:41:45.540Z] > authorizing via signed-in user (shafiaansar142@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project clone-80044. This may result in unexpected behavior. 
+[debug] [2022-08-17T17:41:45.611Z] [hub] writing locator at C:\Users\pak\AppData\Local\Temp\hub-clone-80044.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, eventarc {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, eventarc\u001b[22m"}}
+[warn] !  Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"18\". Using node@18 from host."}}
+[debug] [2022-08-17T17:41:45.749Z] defaultcredentials: writing to file C:\Users\pak\AppData\Roaming\firebase\shafiaansar142_gmail_com_application_default_credentials.json
+[debug] [2022-08-17T17:41:45.771Z] Setting GAC to C:\Users\pak\AppData\Roaming\firebase\shafiaansar142_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\pak\\AppData\\Roaming\\firebase\\shafiaansar142_gmail_com_application_default_credentials.json"}}
+[debug] [2022-08-17T17:41:45.775Z] > refreshing access token with scopes: []
+[debug] [2022-08-17T17:41:45.779Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-08-17T17:41:45.779Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-08-17T17:41:46.701Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-08-17T17:41:46.702Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-08-17T17:41:46.717Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-80044/adminSdkConfig [none]
+[debug] [2022-08-17T17:41:47.502Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-08-17T17:41:47.503Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-08-17T17:41:53.218Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-80044/adminSdkConfig 200
+[debug] [2022-08-17T17:41:53.219Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-80044/adminSdkConfig {"projectId":"clone-80044","storageBucket":"clone-80044.appspot.com","locationId":"us-central"}
+[debug] [2022-08-17T17:41:53.290Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-08-17T17:41:53.291Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-08-17T17:41:53.292Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\pak\\.cache\\firebase\\emulators\\ui-v1.9.0\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\pak\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.9.0\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-08-17T17:41:53.629Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "C:\Users\pak\Documents\Shafia\react\sony-sangha\amazon-clone\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\pak\\Documents\\Shafia\\react\\sony-sangha\\amazon-clone\\functions\" for Cloud Functions..."}}
+[debug] [2022-08-17T17:41:53.854Z] Validating nodejs source
+[debug] [2022-08-17T17:42:04.195Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^10.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-08-17T17:42:04.195Z] Building nodejs source
+[debug] [2022-08-17T17:42:04.195Z] Analyzing nodejs backend spec
+[debug] [2022-08-17T17:42:04.199Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-08-17T17:42:05.364Z] Serving at port 9005
+
+[debug] [2022-08-17T17:42:05.886Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-08-17T17:42:05.919Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5001/clone-80044/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/clone-80044/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-08-17T17:42:42.874Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-08-17T17:42:42.876Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-08-17T17:42:42.877Z] Accepted request GET /clone-80044/us-central1/api --> us-central1-api
+[debug] [2022-08-17T17:42:42.920Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-08-17T17:42:42.934Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-08-17T17:42:42.935Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-08-17T17:42:42.936Z] [worker-us-central1-api-8b16d933-5758-4a07-a64b-4f6328ed1cad]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-8b16d933-5758-4a07-a64b-4f6328ed1cad]: BUSY"}}
+[debug] [2022-08-17T17:42:48.037Z] [runtime-status] [5688] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\pak\\Documents\\Shafia\\react\\sony-sangha\\amazon-clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\pak\\\\Documents\\\\Shafia\\\\react\\\\sony-sangha\\\\amazon-clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-08-17T17:42:48.043Z] [runtime-status] [5688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\pak\\Documents\\Shafia\\react\\sony-sangha\\amazon-clone\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\pak\\\\Documents\\\\Shafia\\\\react\\\\sony-sangha\\\\amazon-clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-08-17T17:42:48.048Z] [runtime-status] [5688] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-08-17T17:42:48.051Z] [runtime-status] [5688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\pak\\Documents\\Shafia\\react\\sony-sangha\\amazon-clone\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\pak\\\\Documents\\\\Shafia\\\\react\\\\sony-sangha\\\\amazon-clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-08-17T17:42:48.488Z] [runtime-status] [5688] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-08-17T17:42:48.489Z] [runtime-status] [5688] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\pak\\Documents\\Shafia\\react\\sony-sangha\\amazon-clone\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\pak\\\\Documents\\\\Shafia\\\\react\\\\sony-sangha\\\\amazon-clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-08-17T17:42:48.492Z] [runtime-status] [5688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\pak\\Documents\\Shafia\\react\\sony-sangha\\amazon-clone\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\pak\\\\Documents\\\\Shafia\\\\react\\\\sony-sangha\\\\amazon-clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-08-17T17:42:48.502Z] [runtime-status] [5688] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\pak\\Documents\\Shafia\\react\\sony-sangha\\amazon-clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\pak\\\\Documents\\\\Shafia\\\\react\\\\sony-sangha\\\\amazon-clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-08-17T17:42:48.504Z] [runtime-status] [5688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.22.0","resolution":"C:\\Users\\pak\\Documents\\Shafia\\react\\sony-sangha\\amazon-clone\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.22.0\",\"resolution\":\"C:\\\\Users\\\\pak\\\\Documents\\\\Shafia\\\\react\\\\sony-sangha\\\\amazon-clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-08-17T17:42:48.506Z] [runtime-status] [5688] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\pak\\Documents\\Shafia\\react\\sony-sangha\\amazon-clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\pak\\\\Documents\\\\Shafia\\\\react\\\\sony-sangha\\\\amazon-clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-08-17T17:42:48.507Z] [runtime-status] [5688] Functions runtime initialized. {"cwd":"C:\\Users\\pak\\Documents\\Shafia\\react\\sony-sangha\\amazon-clone\\functions","node_version":"18.7.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\pak\\\\Documents\\\\Shafia\\\\react\\\\sony-sangha\\\\amazon-clone\\\\functions\",\"node_version\":\"18.7.0\"}"}}
+[debug] [2022-08-17T17:42:49.546Z] [runtime-status] [5688] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-08-17T17:42:49.549Z] [runtime-status] [5688] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Running api in signature http"}}
+[debug] [2022-08-17T17:42:49.597Z] [runtime-status] [5688] Listening to port: \\?\pipe\fire_emu_2ffa044bce24d1fb {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Listening to port: \\\\?\\pipe\\fire_emu_2ffa044bce24d1fb"}}
+[debug] [2022-08-17T17:42:49.739Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-08-17T17:42:49.741Z] [functions] Got req.url=/clone-80044/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-80044/us-central1/api, mapping to path=/"}}
+[debug] [2022-08-17T17:42:49.750Z] [runtime-status] [5688] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Ephemeral server handling GET request"}}
+[debug] [2022-08-17T17:42:49.770Z] [runtime-status] [5688] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [5688] Ephemeral server survived."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-08-17T17:42:49.773Z] [worker-us-central1-api-8b16d933-5758-4a07-a64b-4f6328ed1cad]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-8b16d933-5758-4a07-a64b-4f6328ed1cad]: IDLE"}}
+[debug] [2022-08-17T17:42:49.775Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-08-17T17:42:51.467Z] Functions emulator received unknown request at path /favicon.ico
