@@ -2,7 +2,7 @@ import React, { useState ,useEffect} from 'react'
 import { useStateValue } from '../StateProvider'
 import CheckoutProduct from './CheckoutProduct'
 import CurrencyFormat from 'react-currency-format';
-import { parsePath, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import './Payment.css'
 import {Link} from 'react-router-dom'
 import { CardElement, useStripe, useElements} from "@stripe/react-stripe-js";
@@ -21,28 +21,26 @@ function Payment() {
     const [disabled, setDisabled] = useState(true);
     const [clientSecret, setClientSecret] = useState(true);
   
-   const submit = ()=>{
-    
-    navigate('/orders')
-   }
-   useEffect(() => {
-    // generate the special stripe secret which allows us to charge a customer
-    const getClientSecret = async () => {
-        const response = await axios({
-            method: 'post',
-            // Stripe expects the total in a currencies subunits
-            url: `/payments/create?total=${getBasketTotal(basket) * 100}`
-        });
-        setClientSecret(response.data.clientSecret)
-    }
+    useEffect(() => {
+        // generate the special stripe secret which allows us to charge a customer
+        const getClientSecret = async () => {
+            const response = await axios({
+                method: 'post',
+                // Stripe expects the total in a currencies subunits
+                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+            });
+            setClientSecret(response.data.clientSecret)
+        }
 
-    getClientSecret();
-}, [basket])
+        getClientSecret();
+    }, [basket])
 
-console.log('THE SECRET IS >>>', clientSecret)
-console.log('👱', user)
-    const handleSubmit= async(e)=>{
-        e.preventDefault();
+    console.log('THE SECRET IS >>>', clientSecret)
+    console.log('👱', user)
+
+    const handleSubmit = async (event) => {
+        // do all the fancy stripe stuff...
+        event.preventDefault();
         setProcessing(true);
 
         const payload = await stripe.confirmCardPayment(clientSecret, {
@@ -70,11 +68,14 @@ console.log('👱', user)
             dispatch({
                 type: 'EMPTY_BASKET'
             })
-        navigate('/orders')
+
+    navigate('/orders')
         })
-    }
-const handleChange =(e)=>{
-        setError(e.error? e.error.message :'')
+   }
+
+    const handleChange =(e)=>{
+        setDisabled(e.empty);
+        setError(e.error ? e.error.message : "");
     }
      
   return (
@@ -120,7 +121,7 @@ const handleChange =(e)=>{
             </div>
             <div className='payment_details'>
                 {/* stripe magic will go here */}
-                <form onSubmit={handleSubmit}>
+                <form >
                     <CardElement onChange={handleChange}/>
                 <div className='payment_priceContainer'>
                 <CurrencyFormat
@@ -134,7 +135,7 @@ const handleChange =(e)=>{
                         thousandSeparator={true}
                         prefix={'$'}
                 />
-                <button onClick={submit} >
+                <button onClick={handleSubmit} >
                     <span> Buy Now </span>
                 </button> 
                 </div>

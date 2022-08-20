@@ -7,25 +7,30 @@ function Login() {
   const [email ,setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [name , setName] = useState('')
-  const signIn = e =>{
-    e.preventDefault()
-    console.log('signIn')
-    auth 
-    .signInWithEmailAndPassword(email,password).then(auth =>{
-      navigate('/')
-    }).catch(error => alert (error.message))
-    // e.target.reset()
-  }
-  const register = e =>{
-    e.preventDefault()
-    auth.createUserWithEmailAndPassword(email,password).then((auth)=>{
-      console.log(auth)
-      if(auth){
-        navigate('/')
-      }
-    }).catch(error => alert(error.message))
-    // e.target.reset()
-  }
+  const signIn = e => {
+    e.preventDefault();
+
+    auth
+        .signInWithEmailAndPassword(email, password)
+        .then(auth => {
+            navigate('/')
+        })
+        .catch(error => alert(error.message))
+}
+
+const register = e => {
+    e.preventDefault();
+
+    auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((auth) => {
+            // it successfully created a new user with email and password
+            if (auth) {
+                navigate('/')
+            }
+        })
+        .catch(error => alert(error.message))
+}
   return (
     <div className='login'>
     <Link to= '/'>

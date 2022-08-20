@@ -4,11 +4,11 @@ import './Orders.css'
 import { useStateValue } from '../StateProvider'
 import Order from './Order'
 function Orders() {
-  const [{basket , user},dispatch] = useStateValue()
+  const [{basket , user},setBasket] = useStateValue()
   const [orders,setOrders] = useState([])
  useEffect(()=>{
   if (user){
-    db.collection('users')
+    db.collection('basket')
     .doc(user?.uid)
     .collection('orders')
     .orderBy('created','desc')
