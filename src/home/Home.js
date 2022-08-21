@@ -15,12 +15,10 @@ function Home() {
      </div>
      <div className='home_row'>
         <Product title= 'Anne Klein Womens Strap Watch, AK/3702'
-        image='https://m.media-amazon.com/images/I/71Q4VaQ5FXL._AC_UL320_.jpg' price={35} rating={2} id ='12366'/>
-        <Product title='Roll over image to zoom in
-Brand: ETHNIC EMPORIUM
-ETHNIC EMPORIUM indian Bollywood Designer Heavy Border & plain Anarkali Long Georgette Abaya Muslim Dress 1312 (2xl, red)'
-        image='https://m.media-amazon.com/images/I/61c6Wtg9I3L._MCnd_AC_UL320_.jpg' price={39.05} rating={4} id ='12377' />
-        <Product title='Samsung Galaxy Tab S8 Android Tablet, 11” LCD Screen, 256GB Storage, Qualcomm Snapdragon, S Pen Included, All-Day Battery Ultra Wide Camera, DeX Productivity, Pink Gold'
+        image='https://m.media-amazon.com/images/I/61GtmE1KisL._AC_UY741_.jpg' price={35} rating={2} id ='12366'/>
+        <Product title='Amazon Collection Sterling Silver Celtic  Earrings'
+        image='https://m.media-amazon.com/images/I/71GWNrbDDoL._AC_UY500_.jpg' price={39.05} rating={4} id ='12377' />
+        <Product title='Samsung Galaxy Tab S8 Android Tablet, 11”  Ultra Wide Camera, DeX Productivity, Pink Gold'
         image='https://m.media-amazon.com/images/I/818zWwTXYsL._AC_UY218_.jpg' price={670} rating={3} id ='12388'/>
 
      </div>

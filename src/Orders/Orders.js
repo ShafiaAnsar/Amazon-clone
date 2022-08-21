@@ -43,7 +43,7 @@ const Done =()=>{
                         prefix={'$'}
                 /></div>
           <h4>Your Order is placed successfully✔</h4>
-           <button onClick={Done}>Done</button> 
+           <button onClick={Done}>Finished Shopping</button> 
 
   </div>
   )
