@@ -18,7 +18,7 @@ const Done =()=>{
   return (
     <div  className='order'>
       
-    <h1>Order</h1>   
+    <h1> Your Order has been placed!</h1>   
           {basket?.map(item => (
               <CheckoutProduct
                   id={item.id}
@@ -42,8 +42,7 @@ const Done =()=>{
                         thousandSeparator={true}
                         prefix={'$'}
                 /></div>
-          <h4>Your Order is placed successfully✔</h4>
-           <button onClick={Done}>Finished Shopping</button> 
+           <button onClick={Done}>Buy Again</button> 
 
   </div>
   )
